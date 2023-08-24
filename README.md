@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Run JSON Server on Port 8000
+Install JSON Server globally
+> `npm install -g json-server`
+
+Open a new terminal and run
+> `json-server --watch data/db.json --port 8000`
+
+**NB:** By default, the JSON Server runs on `port 3000`, however, we're currently running the React App on the same port which will create a conflict. That's why we change the `port to 8000`.
+Our JSON data is also stored in the *data* folder and that's why we use the `data/db.json` path.
